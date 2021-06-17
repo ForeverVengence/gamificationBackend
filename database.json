@@ -1,0 +1,292 @@
+{
+  "admins": {
+    "rasonchia@gmail.com": {
+      "name": "Rason",
+      "password": "password`",
+      "sessionActive": true
+    },
+    "rason.chia@gmail.com": {
+      "name": "Rason",
+      "password": "password``",
+      "sessionActive": true
+    },
+    "jason1@gmail.com": {
+      "password": "password",
+      "sessionActive": true
+    },
+    "gg@gmail.com": {
+      "password": "password1",
+      "sessionActive": true
+    }
+  },
+  "quizzes": {
+    "401070156": {
+      "name": "Test",
+      "owner": "rasonchia@gmail.com",
+      "questions": [
+        {
+          "id": "1620674555079.9116",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "thumbnail": null,
+      "active": null,
+      "createdAt": "2021-05-10T09:33:34.062Z"
+    },
+    "659040589": {
+      "name": "test",
+      "owner": "jason1@gmail.com",
+      "questions": [
+        {
+          "id": "1623048580691.7808",
+          "question": "Is United States a Country",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "Yes",
+            "No"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1623048608127.1504",
+          "question": "Is Earth a Planet?",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "Yes",
+            "No"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "thumbnail": null,
+      "active": null,
+      "createdAt": "2021-06-07T06:49:36.630Z"
+    },
+    "848359041": {
+      "name": "COMP3500",
+      "owner": "rasonchia@gmail.com",
+      "questions": [
+        {
+          "id": "1620677778825.937",
+          "question": "Hello World",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1620677971447.5562",
+          "question": "Is the Earth Round?",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "thumbnail": null,
+      "active": null,
+      "createdAt": "2021-05-10T20:04:42.730Z"
+    }
+  },
+  "sessions": {
+    "506519": {
+      "quizId": "659040589",
+      "position": 2,
+      "isoTimeLastQuestionStarted": "2021-06-07T06:52:55.385Z",
+      "players": {
+        "932359100": {
+          "name": "sfghhhdaaggdg",
+          "answers": [
+            {
+              "questionStartedAt": "2021-06-07T06:52:00.758Z",
+              "answeredAt": "2021-06-07T06:52:05.977Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-06-07T06:52:40.447Z",
+              "answeredAt": "2021-06-07T06:52:44.224Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1623048580691.7808",
+          "question": "Is United States a Country",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "Yes",
+            "No"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1623048608127.1504",
+          "question": "Is Earth a Planet?",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "Yes",
+            "No"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
+    "551642": {
+      "quizId": "848359041",
+      "position": 2,
+      "isoTimeLastQuestionStarted": "2021-05-10T20:20:43.098Z",
+      "players": {
+        "590790495": {
+          "name": "Rason",
+          "answers": [
+            {
+              "questionStartedAt": "2021-05-10T20:20:07.767Z",
+              "answeredAt": "2021-05-10T20:20:15.067Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-05-10T20:20:24.923Z",
+              "answeredAt": "2021-05-10T20:20:27.899Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1620677778825.937",
+          "question": "Hello World",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1620677971447.5562",
+          "question": "Is the Earth Round?",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
+    "921792": {
+      "quizId": "848359041",
+      "position": -1,
+      "isoTimeLastQuestionStarted": null,
+      "players": {},
+      "questions": [
+        {
+          "id": "1620677778825.937",
+          "question": "Hello World",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1620677971447.5562",
+          "question": "Is the Earth Round?",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": true,
+      "answerAvailable": false
+    }
+  }
+}
