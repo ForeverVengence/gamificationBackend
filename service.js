@@ -109,7 +109,11 @@ export const login = (email, password) => userLock((resolve, reject) => {
   if (email in admins) {
     if (admins[email].password === password) {
       admins[email].sessionActive = true;
-      resolve(jwt.sign({ email, }, JWT_SECRET, { algorithm: 'HS256', }));
+      const token = jwt.sign({ email, }, JWT_SECRET, { algorithm: 'HS256', })
+      const role = admins[email].permission
+      console.log('In Login Function')
+      console.log(role)
+      resolve({token, role});
     }
   }
   reject(new InputError('Invalid username or password'));
@@ -120,17 +124,18 @@ export const logout = (email) => userLock((resolve, reject) => {
   resolve();
 });
 
-export const register = (email, password, name) => userLock((resolve, reject) => {
+export const register = (email, password, name, role) => userLock((resolve, reject) => {
   if (email in admins) {
-    reject(new InputError('Email address already registered'));
+    reject(new InputError('Email address already registered!'));
   }
   admins[email] = {
     name,
     password,
+    role,
     sessionActive: true,
   };
   const token = jwt.sign({ email, }, JWT_SECRET, { algorithm: 'HS256', });
-  resolve(token);
+  resolve({token, role});
 });
 
 /***************************************************************
@@ -142,6 +147,9 @@ const newQuizPayload = (name, owner) => ({
   owner,
   questions: [],
   thumbnail: null,
+  week: 0,
+  linkedToCourse: [],
+  linkedToTopicGroup: [],
   active: null,
   createdAt: new Date().toISOString(),
 });
@@ -162,6 +170,7 @@ export const getQuizzesFromAdmin = email => quizLock((resolve, reject) => {
     createdAt: quizzes[key].createdAt,
     name: quizzes[key].name,
     thumbnail: quizzes[key].thumbnail,
+    week: quizzes[key].week,
     owner: quizzes[key].owner,
     active: getActiveSessionIdFromQuizId(key),
     oldSessions: getInactiveSessionsIdFromQuizId(key),
@@ -186,10 +195,11 @@ export const getQuiz = quizId => quizLock((resolve, reject) => {
   });
 });
 
-export const updateQuiz = (quizId, questions, name, thumbnail) => quizLock((resolve, reject) => {
+export const updateQuiz = (quizId, questions, name, thumbnail, week) => quizLock((resolve, reject) => {
   if (questions) { quizzes[quizId].questions = questions; }
   if (name) { quizzes[quizId].name = name; }
   if (thumbnail) { quizzes[quizId].thumbnail = thumbnail; }
+  if (week) { quizzes[quizId].week = week; }
   resolve();
 });
 

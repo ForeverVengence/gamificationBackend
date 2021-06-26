@@ -73,9 +73,10 @@ app.post('/admin/auth/login', catchErrors(async (req, res) => {
 }));
 
 app.post('/admin/auth/register', catchErrors(async (req, res) => {
-  const { email, password, name, } = req.body;
-  const token = await register(email, password, name);
-  return res.json({ token, });
+  const { email, password, name, permission, } = req.body;
+  const response = await register(email, password, name, permission);
+  console.log(response);
+  return res.json(response);
 }));
 
 app.post('/admin/auth/logout', catchErrors(authed(async (req, res, email) => {

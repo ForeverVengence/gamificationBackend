@@ -17,6 +17,21 @@
     "gg@gmail.com": {
       "password": "password1",
       "sessionActive": true
+    },
+    "james@gmail.com": {
+      "password": "password",
+      "role": "Staff",
+      "sessionActive": true
+    },
+    "james1@gmail.com": {
+      "password": "password",
+      "role": "Staff",
+      "sessionActive": true
+    },
+    "james2@gmail.com": {
+      "password": "password",
+      "role": "Staff",
+      "sessionActive": true
     }
   },
   "quizzes": {
@@ -43,6 +58,61 @@
       "thumbnail": null,
       "active": null,
       "createdAt": "2021-05-10T09:33:34.062Z"
+    },
+    "623211314": {
+      "name": "COMP3141",
+      "owner": "james2@gmail.com",
+      "questions": [
+        {
+          "id": "1624721697389.702",
+          "question": "blaasfdf",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1624721699437.354",
+          "question": "dsdsgdgsd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1624721699888.306",
+          "question": "dsghfdhgfd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "thumbnail": null,
+      "week": 0,
+      "active": null,
+      "createdAt": "2021-06-26T14:28:08.888Z"
     },
     "659040589": {
       "name": "test",
@@ -124,6 +194,85 @@
     }
   },
   "sessions": {
+    "291606": {
+      "quizId": "623211314",
+      "position": -1,
+      "isoTimeLastQuestionStarted": null,
+      "players": {
+        "298578587": {
+          "name": "sfghhhdaaggdg",
+          "answers": [
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            },
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            },
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1624721697389.702",
+          "question": "blaasfdf",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1624721699437.354",
+          "question": "dsdsgdgsd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1624721699888.306",
+          "question": "dsghfdhgfd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": true,
+      "answerAvailable": false
+    },
     "506519": {
       "quizId": "659040589",
       "position": 2,
