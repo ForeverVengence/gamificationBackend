@@ -150,6 +150,7 @@ const newQuizPayload = (name, owner) => ({
   week: 0,
   linkedToCourse: [],
   linkedToTopicGroup: [],
+  levelType: '',
   active: null,
   createdAt: new Date().toISOString(),
 });
@@ -171,6 +172,7 @@ export const getQuizzesFromAdmin = email => quizLock((resolve, reject) => {
     name: quizzes[key].name,
     thumbnail: quizzes[key].thumbnail,
     week: quizzes[key].week,
+    levelType: quizzes[key].levelType,
     owner: quizzes[key].owner,
     active: getActiveSessionIdFromQuizId(key),
     oldSessions: getInactiveSessionsIdFromQuizId(key),
@@ -195,11 +197,12 @@ export const getQuiz = quizId => quizLock((resolve, reject) => {
   });
 });
 
-export const updateQuiz = (quizId, questions, name, thumbnail, week) => quizLock((resolve, reject) => {
+export const updateQuiz = (quizId, questions, name, thumbnail, week, levelType) => quizLock((resolve, reject) => {
   if (questions) { quizzes[quizId].questions = questions; }
   if (name) { quizzes[quizId].name = name; }
   if (thumbnail) { quizzes[quizId].thumbnail = thumbnail; }
   if (week) { quizzes[quizId].week = week; }
+  if (levelType) { quizzes[quizId].levelType = levelType; }
   resolve();
 });
 
@@ -296,7 +299,7 @@ const sessionIdFromPlayerId = playerId => {
 
 const newSessionPayload = quizId => ({
   quizId,
-  position: -1,
+  position: 0,
   isoTimeLastQuestionStarted: null,
   players: {},
   questions: copy(quizzes[quizId].questions),
@@ -306,6 +309,7 @@ const newSessionPayload = quizId => ({
 
 const newPlayerPayload = (name, numQuestions) => ({
   name: name,
+  pointsEarned: 0,
   answers: Array(numQuestions).fill({
     questionStartedAt: null,
     answeredAt: null,

@@ -59,60 +59,17 @@
       "active": null,
       "createdAt": "2021-05-10T09:33:34.062Z"
     },
-    "623211314": {
-      "name": "COMP3141",
+    "622391736": {
+      "name": "test51",
       "owner": "james2@gmail.com",
-      "questions": [
-        {
-          "id": "1624721697389.702",
-          "question": "blaasfdf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1624721699437.354",
-          "question": "dsdsgdgsd",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1624721699888.306",
-          "question": "dsghfdhgfd",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
+      "questions": [],
       "thumbnail": null,
-      "week": 0,
+      "week": "12",
+      "linkedToCourse": [],
+      "linkedToTopicGroup": [],
+      "levelType": "Learning",
       "active": null,
-      "createdAt": "2021-06-26T14:28:08.888Z"
+      "createdAt": "2021-06-27T10:10:14.619Z"
     },
     "659040589": {
       "name": "test",
@@ -194,6 +151,61 @@
     }
   },
   "sessions": {
+    "238910": {
+      "quizId": "623211314",
+      "position": -1,
+      "isoTimeLastQuestionStarted": null,
+      "players": {},
+      "questions": [
+        {
+          "id": "1624721697389.702",
+          "question": "blaasfdf",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1624721699437.354",
+          "question": "dsdsgdgsd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1624721699888.306",
+          "question": "dsghfdhgfd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
     "291606": {
       "quizId": "623211314",
       "position": -1,
@@ -270,7 +282,47 @@
           "media": null
         }
       ],
-      "active": true,
+      "active": false,
+      "answerAvailable": false
+    },
+    "494160": {
+      "quizId": "795397979",
+      "position": 0,
+      "isoTimeLastQuestionStarted": null,
+      "players": {},
+      "questions": [
+        {
+          "id": "1624780560569.2417",
+          "question": "dffdgfd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1624780913328.8525",
+          "question": "fsdsgsdfgdsgfdfggfgf",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
       "answerAvailable": false
     },
     "506519": {
@@ -396,6 +448,179 @@
       ],
       "active": false,
       "answerAvailable": false
+    },
+    "612054": {
+      "quizId": "623211314",
+      "position": -1,
+      "isoTimeLastQuestionStarted": null,
+      "players": {},
+      "questions": [
+        {
+          "id": "1624721697389.702",
+          "question": "blaasfdf",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1624721699437.354",
+          "question": "dsdsgdgsd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1624721699888.306",
+          "question": "dsghfdhgfd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
+    "729236": {
+      "quizId": "795397979",
+      "position": 0,
+      "isoTimeLastQuestionStarted": null,
+      "players": {
+        "304368025": {
+          "name": "sfghhhdaaggdg",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            },
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1624780560569.2417",
+          "question": "dffdgfd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1624780913328.8525",
+          "question": "fsdsgsdfgdsgfdfggfgf",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
+    "781467": {
+      "quizId": "795397979",
+      "position": 2,
+      "isoTimeLastQuestionStarted": "2021-06-27T08:03:07.377Z",
+      "players": {
+        "610807570": {
+          "name": "sfghhhdaaggdg",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            },
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1624780560569.2417",
+          "question": "dffdgfd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1624780913328.8525",
+          "question": "fsdsgsdfgdsgfdfggfgf",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": true
     },
     "921792": {
       "quizId": "848359041",
