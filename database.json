@@ -32,9 +32,94 @@
       "password": "password",
       "role": "Staff",
       "sessionActive": true
+    },
+    "fdasfd@gmail.com": {
+      "password": "paSSWOD",
+      "role": "Staff",
+      "sessionActive": true
     }
   },
   "quizzes": {
+    "165892859": {
+      "name": "test",
+      "owner": "james2@gmail.com",
+      "questions": [
+        {
+          "id": "1624860792104.9377",
+          "question": "is the world round",
+          "type": "single",
+          "points": 10000,
+          "duration": 20,
+          "answers": [
+            "correct",
+            "wrong",
+            "wrong",
+            "wrong",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": {
+            "type": "video",
+            "src": "https://www.youtube.com/watch?v=zOjov-2OZ0E"
+          }
+        },
+        {
+          "id": "1624861238281.6526",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "True",
+            "False"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": {
+            "type": "video",
+            "src": "https://www.youtube.com/watch?v=lr7FO3rr8jg"
+          }
+        }
+      ],
+      "thumbnail": null,
+      "week": 0,
+      "linkedToCourse": [],
+      "linkedToTopicGroup": [],
+      "levelType": "",
+      "active": null,
+      "createdAt": "2021-06-28T06:13:09.629Z"
+    },
+    "217231049": {
+      "name": "inffsd",
+      "owner": "james2@gmail.com",
+      "questions": [
+        {
+          "id": "1624861532901.5488",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "thumbnail": null,
+      "week": 0,
+      "linkedToCourse": [],
+      "linkedToTopicGroup": [],
+      "levelType": "",
+      "active": null,
+      "createdAt": "2021-06-28T06:25:16.131Z"
+    },
     "401070156": {
       "name": "Test",
       "owner": "rasonchia@gmail.com",
@@ -58,18 +143,6 @@
       "thumbnail": null,
       "active": null,
       "createdAt": "2021-05-10T09:33:34.062Z"
-    },
-    "622391736": {
-      "name": "test51",
-      "owner": "james2@gmail.com",
-      "questions": [],
-      "thumbnail": null,
-      "week": "12",
-      "linkedToCourse": [],
-      "linkedToTopicGroup": [],
-      "levelType": "Learning",
-      "active": null,
-      "createdAt": "2021-06-27T10:10:14.619Z"
     },
     "659040589": {
       "name": "test",
@@ -151,6 +224,92 @@
     }
   },
   "sessions": {
+    "101811": {
+      "quizId": "799756807",
+      "position": 3,
+      "isoTimeLastQuestionStarted": "2021-07-02T10:29:40.286Z",
+      "players": {
+        "242748938": {
+          "name": "sfghhhdaaggdg",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": null,
+              "answeredAt": "2021-07-02T10:27:24.328Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-02T10:27:25.756Z",
+              "answeredAt": "2021-07-02T10:27:31.080Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-02T10:28:50.065Z",
+              "answeredAt": "2021-07-02T10:28:50.354Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1625221055766.02",
+          "question": "gfdgfgdg",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1625221057222.011",
+          "question": "fdgfdgfdg",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1625221057415.792",
+          "question": "afhfbbfb",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
     "238910": {
       "quizId": "623211314",
       "position": -1,
@@ -269,6 +428,204 @@
         {
           "id": "1624721699888.306",
           "question": "dsghfdhgfd",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
+    "294134": {
+      "quizId": "165892859",
+      "position": 0,
+      "isoTimeLastQuestionStarted": null,
+      "players": {},
+      "questions": [
+        {
+          "id": "1624860792104.9377",
+          "question": "is the world round",
+          "type": "single",
+          "points": 10000,
+          "duration": 20,
+          "answers": [
+            "correct",
+            "wrong",
+            "wrong",
+            "wrong",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
+    "343113": {
+      "quizId": "799756807",
+      "position": 3,
+      "isoTimeLastQuestionStarted": "2021-07-02T10:32:17.302Z",
+      "players": {
+        "685935701": {
+          "name": "sfghhhdaaggdg",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            },
+            {
+              "questionStartedAt": "2021-07-02T10:30:00.847Z",
+              "answeredAt": "2021-07-02T10:30:05.002Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-02T10:32:03.357Z",
+              "answeredAt": "2021-07-02T10:32:03.663Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1625221055766.02",
+          "question": "gfdgfgdg",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1625221057222.011",
+          "question": "fdgfdgfdg",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1625221057415.792",
+          "question": "afhfbbfb",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
+    "478067": {
+      "quizId": "799756807",
+      "position": 3,
+      "isoTimeLastQuestionStarted": "2021-07-02T11:27:25.151Z",
+      "players": {
+        "446148184": {
+          "name": "sfghhhdaaggdg",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": "2021-07-02T10:46:05.213Z",
+              "answeredAt": "2021-07-02T10:46:12.597Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-02T10:54:48.128Z",
+              "answeredAt": "2021-07-02T10:54:52.942Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-02T10:55:02.184Z",
+              "answeredAt": "2021-07-02T10:55:02.624Z",
+              "answerIds": [
+                0
+              ],
+              "correct": true
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1625221055766.02",
+          "question": "gfdgfgdg",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1625221057222.011",
+          "question": "fdgfdgfdg",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1625221057415.792",
+          "question": "afhfbbfb",
           "type": "single",
           "points": 1000,
           "duration": 10,
@@ -622,6 +979,61 @@
       "active": false,
       "answerAvailable": true
     },
+    "904226": {
+      "quizId": "799756807",
+      "position": -1,
+      "isoTimeLastQuestionStarted": null,
+      "players": {},
+      "questions": [
+        {
+          "id": "1625221055766.02",
+          "question": "gfdgfgdg",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1625221057222.011",
+          "question": "fdgfdgfdg",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1625221057415.792",
+          "question": "afhfbbfb",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
     "921792": {
       "quizId": "848359041",
       "position": -1,
@@ -660,6 +1072,74 @@
         }
       ],
       "active": true,
+      "answerAvailable": false
+    },
+    "925393": {
+      "quizId": "165892859",
+      "position": 2,
+      "isoTimeLastQuestionStarted": "2021-06-28T06:27:27.871Z",
+      "players": {
+        "662074784": {
+          "name": "sfghhhdaaggdg",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            },
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1624860792104.9377",
+          "question": "is the world round",
+          "type": "single",
+          "points": 10000,
+          "duration": 20,
+          "answers": [
+            "correct",
+            "wrong",
+            "wrong",
+            "wrong",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": {
+            "type": "video",
+            "src": "https://www.youtube.com/watch?v=zOjov-2OZ0E"
+          }
+        },
+        {
+          "id": "1624861238281.6526",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "True",
+            "False"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": {
+            "type": "video",
+            "src": "https://www.youtube.com/watch?v=lr7FO3rr8jg"
+          }
+        }
+      ],
+      "active": false,
       "answerAvailable": false
     }
   }

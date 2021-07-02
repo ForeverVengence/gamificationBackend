@@ -148,9 +148,8 @@ const newQuizPayload = (name, owner) => ({
   questions: [],
   thumbnail: null,
   week: 0,
-  linkedToCourse: [],
-  linkedToTopicGroup: [],
   levelType: '',
+  levelFormat: '',
   active: null,
   createdAt: new Date().toISOString(),
 });
@@ -299,7 +298,7 @@ const sessionIdFromPlayerId = playerId => {
 
 const newSessionPayload = quizId => ({
   quizId,
-  position: 0,
+  position: -1,
   isoTimeLastQuestionStarted: null,
   players: {},
   questions: copy(quizzes[quizId].questions),
