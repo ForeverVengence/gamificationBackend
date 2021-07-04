@@ -21,15 +21,19 @@ const DATABASE_FILE = './database.json';
 let admins = {};
 let quizzes = {};
 let sessions = {};
+let courses = {};
+let topicGroups = {};
+
 
 const sessionTimeouts = {};
 
-const update = (admins, quizzes, sessions) =>
+const update = (admins, courses, quizzes, sessions) =>
   new Promise((resolve, reject) => {
     lock.acquire('saveData', () => {
       try {
         fs.writeFileSync(DATABASE_FILE, JSON.stringify({
           admins,
+          courses,
           quizzes,
           sessions,
         }, null, 2));
@@ -40,10 +44,11 @@ const update = (admins, quizzes, sessions) =>
     });
   });
 
-export const save = () => update(admins, quizzes, sessions);
+export const save = () => update(admins, courses, quizzes, sessions);
 export const reset = () => {
   update({}, {}, {});
   admins = {};
+  courses = {};
   quizzes = {};
   sessions = {};
 };
@@ -51,6 +56,7 @@ export const reset = () => {
 try {
   const data = JSON.parse(fs.readFileSync(DATABASE_FILE));
   admins = data.admins;
+  courses = data.courses;
   quizzes = data.quizzes;
   sessions = data.sessions;
 } catch {
@@ -64,6 +70,7 @@ try {
 
 const newSessionId = _ => generateId(Object.keys(sessions), 999999);
 const newQuizId = _ => generateId(Object.keys(quizzes));
+const newCourseId = _ => generateId(Object.keys(courses), 99999999);
 const newPlayerId = _ => generateId(Object.keys(sessions).map(s => Object.keys(sessions[s].players)));
 
 export const userLock = callback => new Promise((resolve, reject) => {
@@ -72,6 +79,10 @@ export const userLock = callback => new Promise((resolve, reject) => {
 
 export const quizLock = callback => new Promise((resolve, reject) => {
   lock.acquire('quizMutateLock', callback(resolve, reject));
+});
+
+export const courseLock = callback => new Promise((resolve, reject) => {
+  lock.acquire('courseMutateLock', callback(resolve, reject));
 });
 
 export const sessionLock = callback => new Promise((resolve, reject) => {
@@ -111,8 +122,6 @@ export const login = (email, password) => userLock((resolve, reject) => {
       admins[email].sessionActive = true;
       const token = jwt.sign({ email, }, JWT_SECRET, { algorithm: 'HS256', })
       const role = admins[email].permission
-      console.log('In Login Function')
-      console.log(role)
       resolve({token, role});
     }
   }
@@ -137,6 +146,34 @@ export const register = (email, password, name, role) => userLock((resolve, reje
   const token = jwt.sign({ email, }, JWT_SECRET, { algorithm: 'HS256', });
   resolve({token, role});
 });
+
+/***************************************************************
+                       Course Functions
+***************************************************************/
+
+const newCoursePayload = (courseCode, startDate, endDate, term, owner) => ({
+  courseCode,
+  owner,
+  levels: [],
+  startDate,
+  endDate,
+  term,
+  active: null,
+  createdAt: new Date().toISOString(),
+});
+
+
+export const addCourse = (courseCode, startDate, endDate, term, year, owner) => courseLock((resolve, reject) => {
+  
+  if (courseCode === undefined) {
+    reject(new InputError('Must provide a course code for new course'));
+  } else {
+    const newCourseID = newCourseId();
+    courses[newCourseID] = newCoursePayload(courseCode, startDate, endDate, term, year, owner);
+    resolve(newCourseID);
+  }
+});
+
 
 /***************************************************************
                        Quiz Functions
@@ -179,11 +216,14 @@ export const getQuizzesFromAdmin = email => quizLock((resolve, reject) => {
 });
 
 export const addQuiz = (name, email) => quizLock((resolve, reject) => {
+  
   if (name === undefined) {
     reject(new InputError('Must provide a name for new quiz'));
   } else {
     const newId = newQuizId();
+    console.log(newId)
     quizzes[newId] = newQuizPayload(name, email);
+    
     resolve(newId);
   }
 });
@@ -196,12 +236,15 @@ export const getQuiz = quizId => quizLock((resolve, reject) => {
   });
 });
 
-export const updateQuiz = (quizId, questions, name, thumbnail, week, levelType) => quizLock((resolve, reject) => {
-  if (questions) { quizzes[quizId].questions = questions; }
+export const updateQuiz = (quizId, questions, name, thumbnail, week, levelType, levelFormat) => quizLock((resolve, reject) => {
+  if (questions) {
+    quizzes[quizId].questions = questions;
+  }
   if (name) { quizzes[quizId].name = name; }
   if (thumbnail) { quizzes[quizId].thumbnail = thumbnail; }
   if (week) { quizzes[quizId].week = week; }
   if (levelType) { quizzes[quizId].levelType = levelType; }
+  if (levelFormat) { quizzes[quizId].levelFormat = levelFormat; }  
   resolve();
 });
 

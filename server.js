@@ -30,6 +30,7 @@ import {
   getQuestion,
   getAnswers,
   hasStarted,
+  addCourse,
 } from './service.js';
 
 import volleyball from 'volleyball';
@@ -84,6 +85,17 @@ app.post('/admin/auth/logout', catchErrors(authed(async (req, res, email) => {
   return res.json({});
 })));
 
+
+/***************************************************************
+                       Course Functions
+***************************************************************/
+app.post('/admin/course/new', catchErrors(authed(async (req, res, email) => {
+  const courseID = await addCourse (req.body.courseCode, req.body.startDate, req.body.endDate, req.body.term, req.body.year, email);
+  return res.json({ courseId: courseID });
+})));
+
+
+
 /***************************************************************
                        Quiz Functions
 ***************************************************************/
@@ -93,7 +105,8 @@ app.get('/admin/quiz', catchErrors(authed(async (req, res, email) => {
 })));
 
 app.post('/admin/quiz/new', catchErrors(authed(async (req, res, email) => {
-  return res.json({ quizId: await addQuiz(req.body.name, email), });
+  console.log("In New Quiz");
+  return res.json({ quizId: await addQuiz(req.body.name, email) });
 })));
 
 app.get('/admin/quiz/:quizid', catchErrors(authed(async (req, res, email) => {
@@ -104,9 +117,9 @@ app.get('/admin/quiz/:quizid', catchErrors(authed(async (req, res, email) => {
 
 app.put('/admin/quiz/:quizid', catchErrors(authed(async (req, res, email) => {
   const { quizid, } = req.params;
-  const { questions, name, thumbnail, week, levelType } = req.body;
+  const { questions, name, thumbnail, week, levelType, levelFormat } = req.body;
   await assertOwnsQuiz(email, quizid);
-  await updateQuiz(quizid, questions, name, thumbnail, week, levelType);
+  await updateQuiz(quizid, questions, name, thumbnail, week, levelType, levelFormat);
   return res.status(200).send({});
 })));
 
