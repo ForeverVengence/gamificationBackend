@@ -171,6 +171,7 @@ app.post('/play/join/:sessionid', catchErrors(async (req, res) => {
   const { sessionid, } = req.params;
   const { name, } = req.body;
   const playerId = await playerJoin(name, sessionid);
+  console.log(playerId);
   return res.status(200).send({ playerId, });
 }));
 

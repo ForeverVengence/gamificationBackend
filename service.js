@@ -71,7 +71,7 @@ try {
 const newSessionId = _ => generateId(Object.keys(sessions), 999999);
 const newQuizId = _ => generateId(Object.keys(quizzes));
 const newCourseId = _ => generateId(Object.keys(courses), 99999999);
-const newPlayerId = _ => generateId(Object.keys(sessions).map(s => Object.keys(sessions[s].players)));
+const newPlayerId = (sessionId) => generateId(sessions[sessionId].players);
 
 export const userLock = callback => new Promise((resolve, reject) => {
   lock.acquire('userAuthLock', callback(resolve, reject));
@@ -92,10 +92,14 @@ export const sessionLock = callback => new Promise((resolve, reject) => {
 const copy = x => JSON.parse(JSON.stringify(x));
 const randNum = max => Math.round(Math.random() * (max - Math.floor(max / 10)) + Math.floor(max / 10));
 const generateId = (currentList, max = 999999999) => {
+  console.log(currentList);
   let R = randNum(max);
-  while (currentList.includes(R)) {
-    R = randNum(max);
+  if (Object.keys(currentList).length != 0 ) {
+    while (currentList.includes(R)) {
+      R = randNum(max);
+    }
   }
+  
   return R.toString();
 };
 
@@ -386,15 +390,24 @@ export const sessionResults = sessionId => sessionLock((resolve, reject) => {
 });
 
 export const playerJoin = (name, sessionId) => sessionLock((resolve, reject) => {
+  console.log(name);
+  console.log(sessionId);
+  
   if (name === undefined) {
+    console.log("name must be supplied");
     reject(new InputError('Name must be supplied'));
   } else {
+    console.log("else");
     const session = getActiveSessionFromSessionId(sessionId);
+    console.log("Active Session: " + session);
     if (session.position > 0) {
       reject(new InputError('Session has already begun'));
     } else {
-      const id = newPlayerId();
+      console.log("create new player");
+      const id = newPlayerId(sessionId);
+      console.log(id);
       session.players[id] = newPlayerPayload(name, session.questions.length);
+      console.log(session.players[id]);
       resolve(parseInt(id, 10));
     }
   }
