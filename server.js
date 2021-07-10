@@ -69,13 +69,14 @@ const authed = fn => async (req, res) => {
 
 app.post('/admin/auth/login', catchErrors(async (req, res) => {
   const { email, password, } = req.body;
-  const token = await login(email, password);
-  return res.json({ token, });
+  const response = await login(email, password);
+  console.log(response);
+  return res.json(response);
 }));
 
 app.post('/admin/auth/register', catchErrors(async (req, res) => {
-  const { email, password, name, permission, } = req.body;
-  const response = await register(email, password, name, permission);
+  const { email, password, username, permission, } = req.body;
+  const response = await register(email, password, username, permission);
   console.log(response);
   return res.json(response);
 }));
@@ -139,7 +140,7 @@ app.post('/admin/quiz/:quizid/start', catchErrors(authed(async (req, res, email)
 
 app.post('/admin/quiz/:quizid/advance', catchErrors(authed(async (req, res, email) => {
   const { quizid, } = req.params;
-  await assertOwnsQuiz(email, quizid);
+  // await assertOwnsQuiz(email, quizid);
   const stage = await advanceQuiz(quizid);
   return res.status(200).json({ stage, });
 })));

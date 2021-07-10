@@ -125,8 +125,9 @@ export const login = (email, password) => userLock((resolve, reject) => {
     if (admins[email].password === password) {
       admins[email].sessionActive = true;
       const token = jwt.sign({ email, }, JWT_SECRET, { algorithm: 'HS256', })
-      const role = admins[email].permission
-      resolve({token, role});
+      const role = admins[email].role
+      const username = admins[email].username
+      resolve({token, role, username});
     }
   }
   reject(new InputError('Invalid username or password'));
@@ -137,12 +138,12 @@ export const logout = (email) => userLock((resolve, reject) => {
   resolve();
 });
 
-export const register = (email, password, name, role) => userLock((resolve, reject) => {
+export const register = (email, password, username, role) => userLock((resolve, reject) => {
   if (email in admins) {
     reject(new InputError('Email address already registered!'));
   }
   admins[email] = {
-    name,
+    username,
     password,
     role,
     sessionActive: true,

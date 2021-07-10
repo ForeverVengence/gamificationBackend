@@ -1,144 +1,21 @@
 {
   "admins": {
     "rasonchia@gmail.com": {
-      "name": "Rason",
-      "password": "password`",
-      "sessionActive": true
-    },
-    "rason.chia@gmail.com": {
-      "name": "Rason",
-      "password": "password``",
-      "sessionActive": true
-    },
-    "jason1@gmail.com": {
-      "password": "password",
-      "sessionActive": true
-    },
-    "gg@gmail.com": {
+      "username": "rason",
       "password": "password1",
-      "sessionActive": true
-    },
-    "james@gmail.com": {
-      "password": "password",
-      "role": "Staff",
-      "sessionActive": true
-    },
-    "james1@gmail.com": {
-      "password": "password",
-      "role": "Staff",
-      "sessionActive": true
-    },
-    "james2@gmail.com": {
-      "password": "password",
-      "role": "Staff",
-      "sessionActive": true
-    },
-    "fdasfd@gmail.com": {
-      "password": "paSSWOD",
       "role": "Staff",
       "sessionActive": true
     }
   },
-  "courses": {
-    "19684566": {
-      "courseCode": "COMp2041",
-      "owner": "2021",
-      "levels": [],
-      "startDate": "04/06/2021",
-      "endDate": "28/08/2021",
-      "term": "2",
-      "active": null,
-      "createdAt": "2021-07-04T11:19:09.010Z"
-    },
-    "30740193": {
-      "courseCode": "COMp2041",
-      "owner": "2021",
-      "levels": [],
-      "startDate": "04/06/2021",
-      "endDate": "28/08/2021",
-      "term": "2",
-      "active": null,
-      "createdAt": "2021-07-04T11:19:27.122Z"
-    },
-    "48450607": {
-      "courseCode": "COMp2041",
-      "owner": "2021",
-      "levels": [],
-      "startDate": "04/06/2021",
-      "endDate": "28/08/2021",
-      "term": "2",
-      "active": null,
-      "createdAt": "2021-07-04T11:20:39.067Z"
-    },
-    "67348002": {
-      "courseCode": "COMp2041",
-      "owner": "2021",
-      "levels": [],
-      "startDate": "04/06/2021",
-      "endDate": "28/08/2021",
-      "term": "2",
-      "active": null,
-      "createdAt": "2021-07-04T11:20:12.941Z"
-    },
-    "430432184": {
-      "courseCode": "COMP3141",
-      "owner": "2021",
-      "levels": [],
-      "startDate": "04/07/2021",
-      "endDate": "28/08/2021",
-      "term": "T2",
-      "active": null,
-      "createdAt": "2021-07-04T04:18:59.157Z"
-    },
-    "573897555": {
-      "courseCode": "COMP3141",
-      "owner": "2021",
-      "levels": [],
-      "startDate": "04/07/2021",
-      "endDate": "28/08/2021",
-      "term": "T2",
-      "active": null,
-      "createdAt": "2021-07-04T04:19:10.034Z"
-    },
-    "668149362": {
-      "courseCode": "COMP3141",
-      "owner": "2021",
-      "levels": [],
-      "startDate": "04/07/2021",
-      "endDate": "28/08/2021",
-      "term": "T2",
-      "active": null,
-      "createdAt": "2021-07-04T04:15:00.144Z"
-    },
-    "693853488": {
-      "courseCode": "COMP3141",
-      "owner": "2021",
-      "levels": [],
-      "startDate": "04/07/2021",
-      "endDate": "28/08/2021",
-      "term": "T2",
-      "active": null,
-      "createdAt": "2021-07-04T04:20:23.683Z"
-    },
-    "937583197": {
-      "courseCode": "COMP3141",
-      "owner": "2021",
-      "levels": [],
-      "startDate": "04/07/2021",
-      "endDate": "28/08/2021",
-      "term": "T2",
-      "active": null,
-      "createdAt": "2021-07-04T04:19:23.955Z"
-    }
-  },
+  "courses": {},
   "quizzes": {
-    "575596935": {
-      "name": "dfdfsdfdfdsfdf",
-      "owner": "fdasfd@gmail.com",
+    "684415033": {
+      "name": "uniufdafdsf",
+      "owner": "rasonchia@gmail.com",
       "questions": [
         {
-          "id": "1625644483505.919",
-          "question": "New questiondsfdfsdfdsfdf",
+          "id": "1625898203135.2317",
+          "question": "New question",
           "type": "single",
           "points": 1000,
           "duration": 10,
@@ -152,8 +29,8 @@
           "media": null
         },
         {
-          "id": "1625653007991.5044",
-          "question": "New questionsdfdfdsfdsfdsf",
+          "id": "1625898203536.0063",
+          "question": "New question",
           "type": "single",
           "points": 1000,
           "duration": 10,
@@ -165,22 +42,25 @@
             0
           ],
           "media": null
-        }
-      ],
-      "thumbnail": null,
-      "week": "1",
-      "levelType": "Learning",
-      "levelFormat": "Live Quiz",
-      "active": null,
-      "createdAt": "2021-07-07T07:54:39.335Z"
-    },
-    "616448387": {
-      "name": "dsfdsfds",
-      "owner": "fdasfd@gmail.com",
-      "questions": [
+        },
         {
-          "id": "1625378497171.4707",
-          "question": "New qdfdsffdsfd",
+          "id": "1625898203972.033",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1625898204517.575",
+          "question": "New question",
           "type": "single",
           "points": 1000,
           "duration": 10,
@@ -199,19 +79,31 @@
       "levelType": "Learning",
       "levelFormat": "Level",
       "active": null,
-      "createdAt": "2021-07-04T04:29:51.169Z"
+      "createdAt": "2021-07-10T06:23:18.341Z"
     }
   },
   "sessions": {
-    "126694": {
-      "quizId": "575596935",
+    "898652": {
+      "quizId": "684415033",
       "position": -1,
       "isoTimeLastQuestionStarted": null,
       "players": {
-        "undefined": {
-          "name": "sfghhhdaaggdg",
+        "745947208": {
+          "name": "\"rason\"",
           "pointsEarned": 0,
           "answers": [
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            },
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            },
             {
               "questionStartedAt": null,
               "answeredAt": null,
@@ -229,635 +121,7 @@
       },
       "questions": [
         {
-          "id": "1625644483505.919",
-          "question": "New questiondsfdfsdfdsfdf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1625653007991.5044",
-          "question": "New questionsdfdfdsfdsfdsf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "214492": {
-      "quizId": "616448387",
-      "position": -1,
-      "isoTimeLastQuestionStarted": null,
-      "players": {},
-      "questions": [
-        {
-          "id": "1625378497171.4707",
-          "question": "New qdfdsffdsfd",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "216125": {
-      "quizId": "575596935",
-      "position": -1,
-      "isoTimeLastQuestionStarted": null,
-      "players": {},
-      "questions": [
-        {
-          "id": "1625644483505.919",
-          "question": "New questiondsfdfsdfdsfdf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "286539": {
-      "quizId": "575596935",
-      "position": -1,
-      "isoTimeLastQuestionStarted": null,
-      "players": {},
-      "questions": [
-        {
-          "id": "1625644483505.919",
-          "question": "New questiondsfdfsdfdsfdf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "499489": {
-      "quizId": "616448387",
-      "position": -1,
-      "isoTimeLastQuestionStarted": null,
-      "players": {},
-      "questions": [
-        {
-          "id": "1625378497171.4707",
-          "question": "New qdfdsffdsfd",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "553824": {
-      "quizId": "575596935",
-      "position": 2,
-      "isoTimeLastQuestionStarted": "2021-07-07T10:40:59.812Z",
-      "players": {
-        "306069303": {
-          "name": "sfghhhdaaggdgdsadasdsadd",
-          "pointsEarned": 0,
-          "answers": [
-            {
-              "questionStartedAt": "2021-07-07T10:40:32.233Z",
-              "answeredAt": "2021-07-07T10:40:35.686Z",
-              "answerIds": [
-                0
-              ],
-              "correct": true
-            },
-            {
-              "questionStartedAt": "2021-07-07T10:40:47.987Z",
-              "answeredAt": "2021-07-07T10:40:56.774Z",
-              "answerIds": [
-                0
-              ],
-              "correct": true
-            }
-          ]
-        }
-      },
-      "questions": [
-        {
-          "id": "1625644483505.919",
-          "question": "New questiondsfdfsdfdsfdf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1625653007991.5044",
-          "question": "New questionsdfdfdsfdsfdsf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "570801": {
-      "quizId": "575596935",
-      "position": -1,
-      "isoTimeLastQuestionStarted": null,
-      "players": {},
-      "questions": [
-        {
-          "id": "1625644483505.919",
-          "question": "New questiondsfdfsdfdsfdf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "654648": {
-      "quizId": "616448387",
-      "position": -1,
-      "isoTimeLastQuestionStarted": null,
-      "players": {},
-      "questions": [
-        {
-          "id": "1625378497171.4707",
-          "question": "New qdfdsffdsfd",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "840298": {
-      "quizId": "575596935",
-      "position": -1,
-      "isoTimeLastQuestionStarted": null,
-      "players": {
-        "2856231": {
-          "name": "sfghhhdaaggdg",
-          "pointsEarned": 0,
-          "answers": [
-            {
-              "questionStartedAt": null,
-              "answeredAt": null,
-              "answerIds": [],
-              "correct": false
-            },
-            {
-              "questionStartedAt": null,
-              "answeredAt": null,
-              "answerIds": [],
-              "correct": false
-            }
-          ]
-        }
-      },
-      "questions": [
-        {
-          "id": "1625644483505.919",
-          "question": "New questiondsfdfsdfdsfdf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1625653007991.5044",
-          "question": "New questionsdfdfdsfdsfdsf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "868487": {
-      "quizId": "616448387",
-      "position": -1,
-      "isoTimeLastQuestionStarted": null,
-      "players": {},
-      "questions": [
-        {
-          "id": "1625378497171.4707",
-          "question": "New qdfdsffdsfd",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "910359": {
-      "quizId": "616448387",
-      "position": -1,
-      "isoTimeLastQuestionStarted": null,
-      "players": {},
-      "questions": [
-        {
-          "id": "1625378497171.4707",
-          "question": "New qdfdsffdsfd",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "929187": {
-      "quizId": "575596935",
-      "position": -1,
-      "isoTimeLastQuestionStarted": null,
-      "players": {},
-      "questions": [
-        {
-          "id": "1625644483505.919",
-          "question": "New questiondsfdfsdfdsfdf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": false
-    },
-    "948391": {
-      "quizId": "575596935",
-      "position": 0,
-      "isoTimeLastQuestionStarted": "2021-07-07T10:39:34.400Z",
-      "players": {
-        "310557583": {
-          "name": "sfghhhdaaggdgdsadasd",
-          "pointsEarned": 0,
-          "answers": [
-            {
-              "questionStartedAt": "2021-07-07T10:39:34.400Z",
-              "answeredAt": "2021-07-07T10:39:37.533Z",
-              "answerIds": [
-                0
-              ],
-              "correct": true
-            },
-            {
-              "questionStartedAt": null,
-              "answeredAt": null,
-              "answerIds": [],
-              "correct": false
-            }
-          ]
-        }
-      },
-      "questions": [
-        {
-          "id": "1625644483505.919",
-          "question": "New questiondsfdfsdfdsfdf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1625653007991.5044",
-          "question": "New questionsdfdfdsfdsfdsf",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "active": false,
-      "answerAvailable": true
-    },
-    "165892859": {
-      "name": "test",
-      "owner": "james2@gmail.com",
-      "questions": [
-        {
-          "id": "1624860792104.9377",
-          "question": "is the world round",
-          "type": "single",
-          "points": 10000,
-          "duration": 20,
-          "answers": [
-            "correct",
-            "wrong",
-            "wrong",
-            "wrong",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": {
-            "type": "video",
-            "src": "https://www.youtube.com/watch?v=zOjov-2OZ0E"
-          }
-        },
-        {
-          "id": "1624861238281.6526",
-          "question": "New question",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "True",
-            "False"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": {
-            "type": "video",
-            "src": "https://www.youtube.com/watch?v=lr7FO3rr8jg"
-          }
-        }
-      ],
-      "thumbnail": null,
-      "week": 0,
-      "linkedToCourse": [],
-      "linkedToTopicGroup": [],
-      "levelType": "",
-      "active": null,
-      "createdAt": "2021-06-28T06:13:09.629Z"
-    },
-    "217231049": {
-      "name": "inffsd",
-      "owner": "james2@gmail.com",
-      "questions": [
-        {
-          "id": "1624861532901.5488",
-          "question": "New question",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "thumbnail": null,
-      "week": 0,
-      "linkedToCourse": [],
-      "linkedToTopicGroup": [],
-      "levelType": "",
-      "active": null,
-      "createdAt": "2021-06-28T06:25:16.131Z"
-    },
-    "401070156": {
-      "name": "Test",
-      "owner": "rasonchia@gmail.com",
-      "questions": [
-        {
-          "id": "1620674555079.9116",
-          "question": "New question",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "thumbnail": null,
-      "active": null,
-      "createdAt": "2021-05-10T09:33:34.062Z"
-    },
-    "659040589": {
-      "name": "test",
-      "owner": "jason1@gmail.com",
-      "questions": [
-        {
-          "id": "1623048580691.7808",
-          "question": "Is United States a Country",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "Yes",
-            "No"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1623048608127.1504",
-          "question": "Is Earth a Planet?",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "Yes",
-            "No"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "thumbnail": null,
-      "active": null,
-      "createdAt": "2021-06-07T06:49:36.630Z"
-    },
-    "848359041": {
-      "name": "COMP3500",
-      "owner": "rasonchia@gmail.com",
-      "questions": [
-        {
-          "id": "1620677778825.937",
-          "question": "Hello World",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1620677971447.5562",
-          "question": "Is the Earth Round?",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        }
-      ],
-      "thumbnail": null,
-      "active": null,
-      "createdAt": "2021-05-10T20:04:42.730Z"
-    },
-    "931232342": {
-      "name": "gdsgs",
-      "owner": "fdasfd@gmail.com",
-      "questions": [
-        {
-          "id": "1625360913997.3306",
+          "id": "1625898203135.2317",
           "question": "New question",
           "type": "single",
           "points": 1000,
@@ -872,7 +136,7 @@
           "media": null
         },
         {
-          "id": "1625361689248.7432",
+          "id": "1625898203536.0063",
           "question": "New question",
           "type": "single",
           "points": 1000,
@@ -887,7 +151,7 @@
           "media": null
         },
         {
-          "id": "1625361723767.3623",
+          "id": "1625898203972.033",
           "question": "New question",
           "type": "single",
           "points": 1000,
@@ -902,67 +166,7 @@
           "media": null
         },
         {
-          "id": "1625361760259.9988",
-          "question": "New question",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1625361773149.9934",
-          "question": "New question",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1625361929909.5225",
-          "question": "New question",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1625362120947.9255",
-          "question": "New question",
-          "type": "single",
-          "points": 1000,
-          "duration": 10,
-          "answers": [
-            "correct",
-            "wrong"
-          ],
-          "correctAnswers": [
-            0
-          ],
-          "media": null
-        },
-        {
-          "id": "1625362190896.5215",
+          "id": "1625898204517.575",
           "question": "New question",
           "type": "single",
           "points": 1000,
@@ -977,13 +181,8 @@
           "media": null
         }
       ],
-      "thumbnail": null,
-      "week": 0,
-      "levelType": "Practical",
-      "levelFormat": "Live Quiz",
-      "totalPoints": 8000,
-      "active": null,
-      "createdAt": "2021-07-04T01:05:41.868Z"
+      "active": true,
+      "answerAvailable": false
     }
   }
 }
