@@ -31,6 +31,8 @@ import {
   getAnswers,
   hasStarted,
   addCourse,
+  addPointsToUser,
+  checkPoints,
 } from './service.js';
 
 import volleyball from 'volleyball';
@@ -84,6 +86,21 @@ app.post('/admin/auth/register', catchErrors(async (req, res) => {
 app.post('/admin/auth/logout', catchErrors(authed(async (req, res, email) => {
   await logout(email);
   return res.json({});
+})));
+
+app.post('/admin/auth/addPoints', catchErrors(authed(async (req, res) => {
+  const { email, total } = req.body;
+  console.log(total);
+  const response = await addPointsToUser(email, total);
+  console.log(response);
+  return res.json(response);
+})));
+
+app.post('/admin/auth/checkPoints', catchErrors(authed(async (req, res) => {
+  const { email } = req.body;
+  const response = await checkPoints(email);
+  console.log(response);
+  return res.json(response);
 })));
 
 

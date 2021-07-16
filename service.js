@@ -127,7 +127,8 @@ export const login = (email, password) => userLock((resolve, reject) => {
       const token = jwt.sign({ email, }, JWT_SECRET, { algorithm: 'HS256', })
       const role = admins[email].role
       const username = admins[email].username
-      resolve({token, role, username});
+      const points = admins[email].points
+      resolve({token, role, username, points});
     }
   }
   reject(new InputError('Invalid username or password'));
@@ -138,6 +139,28 @@ export const logout = (email) => userLock((resolve, reject) => {
   resolve();
 });
 
+export const addPointsToUser = (email, total) => userLock((resolve, reject) => {
+  console.log("In function");
+  if (email in admins) {
+      const curr = admins[email].points;
+      console.log(curr);
+      console.log(total);
+      admins[email].points = curr + total;
+      const points = admins[email].points
+      resolve({email, points});
+  }
+  reject(new InputError('Invalid username or password'));
+});
+
+export const checkPoints = (email) => userLock((resolve, reject) => {
+  console.log("In function");
+  if (email in admins) {
+      const curr = admins[email].points;
+      resolve({email, curr});
+  }
+  reject(new InputError('Invalid username or password'));
+});
+
 export const register = (email, password, username, role) => userLock((resolve, reject) => {
   if (email in admins) {
     reject(new InputError('Email address already registered!'));
@@ -146,6 +169,7 @@ export const register = (email, password, username, role) => userLock((resolve, 
     username,
     password,
     role,
+    points: 0,
     sessionActive: true,
   };
   const token = jwt.sign({ email, }, JWT_SECRET, { algorithm: 'HS256', });
@@ -456,12 +480,25 @@ export const submitAnswers = (playerId, answerList) => sessionLock((resolve, rej
     } else if (session.answerAvailable) {
       reject(new InputError('Can\'t answer question once answer is available'));
     } else {
+      let correctCheck = JSON.stringify(quizQuestionGetCorrectAnswers(session.questions[session.position]).sort()) === JSON.stringify(answerList.sort());
+      let pointsEarned = 0;
+      if (correctCheck === true) {
+        pointsEarned = session.questions[session.position].points;
+        console.log("Correct");
+      } else {
+        pointsEarned = 0;
+        console.log("Not Correct");
+      }
+      console.log(pointsEarned);
       session.players[playerId].answers[session.position] = {
         questionStartedAt: session.isoTimeLastQuestionStarted,
         answeredAt: new Date().toISOString(),
         answerIds: answerList,
+        pointsEarned: pointsEarned,
         correct: JSON.stringify(quizQuestionGetCorrectAnswers(session.questions[session.position]).sort()) === JSON.stringify(answerList.sort()),
       };
+
+      
 
       // 
       // 
