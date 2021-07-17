@@ -33,6 +33,7 @@ import {
   addCourse,
   addPointsToUser,
   checkPoints,
+  getCoursesOwned,
 } from './service.js';
 
 import volleyball from 'volleyball';
@@ -112,7 +113,12 @@ app.post('/admin/course/new', catchErrors(authed(async (req, res, email) => {
   return res.json({ courseId: courseID });
 })));
 
-
+app.post('/admin/myCourses', catchErrors(authed(async (req, res, email) => {
+  // getCoursesOwned
+  const res = await getCoursesOwned (email);
+  console.log(res);
+  return res.json();
+})));
 
 /***************************************************************
                        Quiz Functions
@@ -229,7 +235,7 @@ app.get('/', (req, res) => res.redirect('/docs'));
 // app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // const configData = JSON.parse(fs.readFileSync('./frontend/src/config.json'));
-const port = 5005;
+const port = 16000;
 
 const server = app.listen(port, () => {
   console.log('Listening on port ' + port);

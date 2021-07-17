@@ -180,13 +180,14 @@ export const register = (email, password, username, role) => userLock((resolve, 
                        Course Functions
 ***************************************************************/
 
-const newCoursePayload = (courseCode, startDate, endDate, term, owner) => ({
+const newCoursePayload = (courseCode, startDate, endDate, term, year, owner) => ({
   courseCode,
   owner,
   levels: [],
   startDate,
   endDate,
   term,
+  year,
   active: null,
   createdAt: new Date().toISOString(),
 });
@@ -200,6 +201,28 @@ export const addCourse = (courseCode, startDate, endDate, term, year, owner) => 
     const newCourseID = newCourseId();
     courses[newCourseID] = newCoursePayload(courseCode, startDate, endDate, term, year, owner);
     resolve(newCourseID);
+  }
+});
+
+export const getCoursesOwned = (email) => courseLock((resolve, reject) => {
+  
+  if (email === undefined) {
+    reject(new InputError('Must provide an owner email to query'));
+  } else {
+    resolve(Object.keys(courses).filter(key => courses[key].owner === email).map(key => ({
+      id: parseInt(key, 10),
+      createdAt: courses[key].createdAt,
+      courseCode: courses[key].courseCode,
+      levels: courses[key].levels,
+      startDate: courses[key].startDate,
+      endDate: courses[key].endDate,
+      owner: courses[key].owner,
+      active: courses[key].active,
+      term: courses[key].term,
+      year: courses[key].year,
+    })));
+    
+    // resolve(newCourseID);
   }
 });
 
