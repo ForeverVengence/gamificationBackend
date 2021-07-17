@@ -115,9 +115,10 @@ app.post('/admin/course/new', catchErrors(authed(async (req, res, email) => {
 
 app.post('/admin/myCourses', catchErrors(authed(async (req, res, email) => {
   // getCoursesOwned
-  const res = await getCoursesOwned (email);
-  console.log(res);
-  return res.json();
+  const response = await getCoursesOwned (email);
+  console.log("All Courses Owned");
+  // console.log(response);
+  return res.json(response);
 })));
 
 /***************************************************************

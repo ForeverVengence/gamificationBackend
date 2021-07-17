@@ -145,7 +145,7 @@ export const addPointsToUser = (email, total) => userLock((resolve, reject) => {
       const curr = admins[email].points;
       console.log(curr);
       console.log(total);
-      admins[email].points = curr + total;
+      admins[email].points = parseInt(curr) + parseInt(total);
       const points = admins[email].points
       resolve({email, points});
   }

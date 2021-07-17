@@ -4,7 +4,7 @@
       "username": "example1",
       "password": "password1",
       "role": "Staff",
-      "points": 14000,
+      "points": 5000,
       "sessionActive": true
     },
     "student@gmail.com": {
@@ -16,26 +16,60 @@
     }
   },
   "courses": {
-    "56307545": {
-      "courseCode": "COMP3141",
+    "25699885": {
+      "courseCode": "fsdfsd",
       "owner": "example1@gmail.com",
       "levels": [],
-      "startDate": "01/01/2020",
-      "endDate": "01/05/2020",
-      "term": "T2",
+      "startDate": "dsfsdf",
+      "endDate": "dsfdsf",
+      "term": "dsfsdf",
+      "year": "dsfdf",
       "active": null,
-      "createdAt": "2021-07-17T06:16:07.364Z"
+      "createdAt": "2021-07-17T16:21:25.109Z"
     },
-    "58466267": {
-      "courseCode": "COMP3211",
+    "37048168": {
+      "courseCode": "saOUNOD",
+      "owner": "example1@gmail.com",
+      "levels": [],
+      "startDate": "QONAOFOA",
+      "endDate": "NIOSDNOF",
+      "term": "IONDWD",
+      "year": "DSGDS",
+      "active": null,
+      "createdAt": "2021-07-17T16:13:40.113Z"
+    },
+    "43220911": {
+      "courseCode": "ECON1100",
       "owner": "example1@gmail.com",
       "levels": [],
       "startDate": "01/01/2020",
       "endDate": "01/05/2020",
-      "term": "T2",
+      "term": "2",
       "year": "2020",
       "active": null,
-      "createdAt": "2021-07-17T06:26:53.321Z"
+      "createdAt": "2021-07-17T15:43:06.209Z"
+    },
+    "56989482": {
+      "courseCode": "fsdfsdfdf",
+      "owner": "example1@gmail.com",
+      "levels": [],
+      "startDate": "dsfsdfdfdf",
+      "endDate": "dsfdsfd",
+      "term": "dsfsdfsdfds",
+      "year": "dsfdffdsf",
+      "active": null,
+      "createdAt": "2021-07-17T16:22:07.281Z"
+    },
+    "63045871": {
+      "courseCode": "affas",
+      "owner": "example1@gmail.com",
+      "levels": [],
+      "startDate": "dfsfsdf",
+      "endDate": "dsfsdf",
+      "term": "dsfds",
+      "year": "dsfsd",
+      "active": null,
+      "createdAt": "2021-07-17T16:20:35.083Z"
     }
   },
   "quizzes": {
@@ -1756,6 +1790,95 @@
       "active": false,
       "answerAvailable": false
     },
+    "415654": {
+      "quizId": "276754170",
+      "position": 3,
+      "isoTimeLastQuestionStarted": "2021-07-17T17:07:29.646Z",
+      "players": {
+        "177526606": {
+          "name": "\"example1\"",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": "2021-07-17T17:06:55.453Z",
+              "answeredAt": "2021-07-17T17:07:05.067Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-17T17:07:06.489Z",
+              "answeredAt": "2021-07-17T17:07:16.054Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-17T17:07:17.941Z",
+              "answeredAt": "2021-07-17T17:07:27.056Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1626421995807.2695",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996148.84",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996420.2046",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
     "454669": {
       "quizId": "276754170",
       "position": 3,
@@ -2864,6 +2987,95 @@
       "active": false,
       "answerAvailable": true
     },
+    "723861": {
+      "quizId": "276754170",
+      "position": 3,
+      "isoTimeLastQuestionStarted": "2021-07-17T16:28:09.882Z",
+      "players": {
+        "487305882": {
+          "name": "\"example1\"",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": "2021-07-17T16:27:30.051Z",
+              "answeredAt": "2021-07-17T16:27:39.357Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-17T16:27:41.303Z",
+              "answeredAt": "2021-07-17T16:27:50.348Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-17T16:27:58.084Z",
+              "answeredAt": "2021-07-17T16:28:07.345Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1626421995807.2695",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996148.84",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996420.2046",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
     "728384": {
       "quizId": "276754170",
       "position": -1,
@@ -3312,6 +3524,95 @@
       "active": false,
       "answerAvailable": false
     },
+    "833693": {
+      "quizId": "276754170",
+      "position": 3,
+      "isoTimeLastQuestionStarted": "2021-07-17T16:31:12.722Z",
+      "players": {
+        "161875958": {
+          "name": "\"example1\"",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": "2021-07-17T16:30:38.932Z",
+              "answeredAt": "2021-07-17T16:30:48.408Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-17T16:30:50.278Z",
+              "answeredAt": "2021-07-17T16:30:59.406Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-17T16:31:01.016Z",
+              "answeredAt": "2021-07-17T16:31:10.414Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1626421995807.2695",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996148.84",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996420.2046",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
     "834385": {
       "quizId": "276754170",
       "position": 3,
@@ -3400,6 +3701,92 @@
       ],
       "active": false,
       "answerAvailable": false
+    },
+    "875792": {
+      "quizId": "276754170",
+      "position": 3,
+      "isoTimeLastQuestionStarted": "2021-07-17T16:52:31.616Z",
+      "players": {
+        "522948403": {
+          "name": "\"example1\"",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": "2021-07-17T16:52:09.447Z",
+              "answeredAt": "2021-07-17T16:52:19.126Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-17T16:52:20.853Z",
+              "answeredAt": "2021-07-17T16:52:30.138Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": null,
+              "answeredAt": null,
+              "answerIds": [],
+              "correct": false
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1626421995807.2695",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996148.84",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996420.2046",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": true
     },
     "883287": {
       "quizId": "684415033",
