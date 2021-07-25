@@ -1,42 +1,75 @@
 {
   "admins": {
-    "example1@gmail.com": {
-      "username": "example1",
+    "rasonchia@gmail.com": {
+      "username": "Rason",
       "password": "password1",
       "role": "Staff",
-      "points": 5000,
-      "sessionActive": true
+      "points": 0,
+      "sessionActive": true,
+      "assignedCourses": [
+        {
+          "courseID": "42059538",
+          "levels": [
+            "276754170",
+            "684415033"
+          ]
+        }
+      ]
     },
     "student@gmail.com": {
-      "username": "student",
+      "username": "Student",
       "password": "password1",
       "role": "Student",
-      "points": 21000,
-      "sessionActive": true
+      "points": 5000,
+      "sessionActive": true,
+      "assignedCourses": [
+        {
+          "courseID": "42059538",
+          "levels": [
+            "276754170",
+            "684415033"
+          ]
+        }
+      ]
+    },
+    "student2@gmail.com": {
+      "username": "Student2",
+      "password": "password1",
+      "role": "Student",
+      "points": 3000,
+      "sessionActive": true,
+      "assignedCourses": [
+        {
+          "courseID": "42059538",
+          "levels": [
+            "276754170",
+            "684415033"
+          ]
+        }
+      ]
+    },
+    "student3@gmail.com": {
+      "username": "Student3",
+      "password": "passwor1",
+      "role": "Student",
+      "points": 0,
+      "sessionActive": true,
+      "assignedCourses": []
     }
   },
   "courses": {
-    "25699885": {
-      "courseCode": "fsdfsd",
-      "owner": "example1@gmail.com",
-      "levels": [],
-      "startDate": "dsfsdf",
-      "endDate": "dsfdsf",
-      "term": "dsfsdf",
-      "year": "dsfdf",
+    "42059538": {
+      "courseCode": "COMP3141",
+      "owner": "rasonchia@gmail.com",
+      "levels": [
+        "276754170"
+      ],
+      "startDate": "01/01/2020",
+      "endDate": "01/05/2020",
+      "term": "T2",
+      "year": "2020",
       "active": null,
-      "createdAt": "2021-07-17T16:21:25.109Z"
-    },
-    "37048168": {
-      "courseCode": "saOUNOD",
-      "owner": "example1@gmail.com",
-      "levels": [],
-      "startDate": "QONAOFOA",
-      "endDate": "NIOSDNOF",
-      "term": "IONDWD",
-      "year": "DSGDS",
-      "active": null,
-      "createdAt": "2021-07-17T16:13:40.113Z"
+      "createdAt": "2021-07-18T09:44:37.777Z"
     },
     "43220911": {
       "courseCode": "ECON1100",
@@ -48,34 +81,15 @@
       "year": "2020",
       "active": null,
       "createdAt": "2021-07-17T15:43:06.209Z"
-    },
-    "56989482": {
-      "courseCode": "fsdfsdfdf",
-      "owner": "example1@gmail.com",
-      "levels": [],
-      "startDate": "dsfsdfdfdf",
-      "endDate": "dsfdsfd",
-      "term": "dsfsdfsdfds",
-      "year": "dsfdffdsf",
-      "active": null,
-      "createdAt": "2021-07-17T16:22:07.281Z"
-    },
-    "63045871": {
-      "courseCode": "affas",
-      "owner": "example1@gmail.com",
-      "levels": [],
-      "startDate": "dfsfsdf",
-      "endDate": "dsfsdf",
-      "term": "dsfds",
-      "year": "dsfsd",
-      "active": null,
-      "createdAt": "2021-07-17T16:20:35.083Z"
     }
   },
   "quizzes": {
     "276754170": {
       "name": "test",
       "owner": "example1@gmail.com",
+      "assignedTo": [
+        "student@gmail.com"
+      ],
       "questions": [
         {
           "id": "1626421995807.2695",
@@ -130,9 +144,68 @@
       "active": null,
       "createdAt": "2021-07-16T07:53:12.658Z"
     },
+    "663831829": {
+      "name": "sfafssafafs STUDENT",
+      "owner": "student@gmail.com",
+      "assignedTo": [],
+      "questions": [
+        {
+          "id": "1627189349036.3804",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1627189349337.8948",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1627189349759.5974",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "thumbnail": null,
+      "week": 0,
+      "levelType": "Practical",
+      "levelFormat": "Live Quiz",
+      "active": null,
+      "createdAt": "2021-07-25T05:02:22.653Z"
+    },
     "684415033": {
       "name": "uniufdafdsf",
       "owner": "rasonchia@gmail.com",
+      "assignedTo": [],
       "questions": [
         {
           "id": "1625898203135.2317",
@@ -405,6 +478,95 @@
       ],
       "active": false,
       "answerAvailable": true
+    },
+    "187377": {
+      "quizId": "276754170",
+      "position": 3,
+      "isoTimeLastQuestionStarted": "2021-07-18T10:44:30.319Z",
+      "players": {
+        "642595145": {
+          "name": "\"Student2\"",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": "2021-07-18T10:43:56.261Z",
+              "answeredAt": "2021-07-18T10:44:05.530Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-18T10:44:07.550Z",
+              "answeredAt": "2021-07-18T10:44:17.522Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-18T10:44:19.211Z",
+              "answeredAt": "2021-07-18T10:44:28.526Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1626421995807.2695",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996148.84",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996420.2046",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
     },
     "194355": {
       "quizId": "684415033",
@@ -1119,6 +1281,95 @@
             {
               "questionStartedAt": "2021-07-16T14:01:21.292Z",
               "answeredAt": "2021-07-16T14:01:30.574Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1626421995807.2695",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996148.84",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996420.2046",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
+    "277859": {
+      "quizId": "276754170",
+      "position": 3,
+      "isoTimeLastQuestionStarted": "2021-07-25T04:38:21.736Z",
+      "players": {
+        "927682433": {
+          "name": "\"Student\"",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": "2021-07-25T04:37:47.483Z",
+              "answeredAt": "2021-07-25T04:37:57.017Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-25T04:37:59.952Z",
+              "answeredAt": "2021-07-25T04:38:09.021Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-25T04:38:10.665Z",
+              "answeredAt": "2021-07-25T04:38:20.018Z",
               "answerIds": [
                 0
               ],
@@ -3648,6 +3899,95 @@
               ],
               "pointsEarned": 1000,
               "correct": true
+            }
+          ]
+        }
+      },
+      "questions": [
+        {
+          "id": "1626421995807.2695",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996148.84",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        },
+        {
+          "id": "1626421996420.2046",
+          "question": "New question",
+          "type": "single",
+          "points": 1000,
+          "duration": 10,
+          "answers": [
+            "correct",
+            "wrong"
+          ],
+          "correctAnswers": [
+            0
+          ],
+          "media": null
+        }
+      ],
+      "active": false,
+      "answerAvailable": false
+    },
+    "845801": {
+      "quizId": "276754170",
+      "position": 3,
+      "isoTimeLastQuestionStarted": "2021-07-25T04:35:40.419Z",
+      "players": {
+        "845969703": {
+          "name": "\"Student\"",
+          "pointsEarned": 0,
+          "answers": [
+            {
+              "questionStartedAt": "2021-07-25T04:35:07.619Z",
+              "answeredAt": "2021-07-25T04:35:16.667Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-25T04:35:18.607Z",
+              "answeredAt": "2021-07-25T04:35:27.675Z",
+              "answerIds": [
+                0
+              ],
+              "pointsEarned": 1000,
+              "correct": true
+            },
+            {
+              "questionStartedAt": "2021-07-25T04:35:29.211Z",
+              "answeredAt": "2021-07-25T04:35:38.669Z",
+              "answerIds": [
+                1
+              ],
+              "pointsEarned": 0,
+              "correct": false
             }
           ]
         }

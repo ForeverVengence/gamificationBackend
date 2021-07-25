@@ -140,7 +140,7 @@ export const logout = (email) => userLock((resolve, reject) => {
 });
 
 export const addPointsToUser = (email, total) => userLock((resolve, reject) => {
-  console.log("In function");
+  // console.log("In function");
   if (email in admins) {
       const curr = admins[email].points;
       console.log(curr);
@@ -153,7 +153,7 @@ export const addPointsToUser = (email, total) => userLock((resolve, reject) => {
 });
 
 export const checkPoints = (email) => userLock((resolve, reject) => {
-  console.log("In function");
+  // console.log("In function");
   if (email in admins) {
       const curr = admins[email].points;
       resolve({email, curr});
@@ -171,6 +171,7 @@ export const register = (email, password, username, role) => userLock((resolve, 
     role,
     points: 0,
     sessionActive: true,
+    assignedCourses: [],
   };
   const token = jwt.sign({ email, }, JWT_SECRET, { algorithm: 'HS256', });
   resolve({token, role});
@@ -184,6 +185,7 @@ const newCoursePayload = (courseCode, startDate, endDate, term, year, owner) => 
   courseCode,
   owner,
   levels: [],
+  students: [],
   startDate,
   endDate,
   term,
@@ -226,6 +228,37 @@ export const getCoursesOwned = (email) => courseLock((resolve, reject) => {
   }
 });
 
+export const getAssignedCourses = (email) => userLock((resolve, reject) => {
+  
+  if (email === undefined) {
+    reject(new InputError('Must provide an owner email to query'));
+  } else {
+    if (email in admins) {
+      resolve(admins[email].assignedCourses);
+    } else {
+      resolve({});
+    }
+  }
+});
+
+export const addLevelToCourse = (courseID, levelID, email) => userLock((resolve, reject) => {
+  console.log(levelID);
+  if (email === undefined) {
+    reject(new InputError('Must provide an owner email to query'));
+  } else {
+    if (courseID in courses) {
+      if (!courses[courseID].levels.includes(levelID)){
+        courses[courseID].levels.push(levelID);
+      }
+      // Add Each Course User to access this level
+
+      resolve(courses[courseID].levels);
+    } else {
+      resolve({});
+    }
+  }
+});
+
 
 /***************************************************************
                        Quiz Functions
@@ -234,6 +267,7 @@ export const getCoursesOwned = (email) => courseLock((resolve, reject) => {
 const newQuizPayload = (name, owner) => ({
   name,
   owner,
+  assignedTo: [],
   questions: [],
   thumbnail: null,
   week: 0,
@@ -253,8 +287,9 @@ export const assertOwnsQuiz = (email, quizId) => quizLock((resolve, reject) => {
   }
 });
 
-export const getQuizzesFromAdmin = email => quizLock((resolve, reject) => {
-  resolve(Object.keys(quizzes).filter(key => quizzes[key].owner === email).map(key => ({
+export const getQuizzesFromAdmin = () => quizLock((resolve, reject) => {
+  // .filter(key => quizzes[key].owner === email)
+  resolve(Object.keys(quizzes).map(key => ({
     id: parseInt(key, 10),
     createdAt: quizzes[key].createdAt,
     name: quizzes[key].name,

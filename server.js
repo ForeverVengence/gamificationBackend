@@ -34,6 +34,8 @@ import {
   addPointsToUser,
   checkPoints,
   getCoursesOwned,
+  getAssignedCourses,
+  addLevelToCourse,
 } from './service.js';
 
 import volleyball from 'volleyball';
@@ -100,13 +102,13 @@ app.post('/admin/auth/addPoints', catchErrors(authed(async (req, res) => {
 app.post('/admin/auth/checkPoints', catchErrors(authed(async (req, res) => {
   const { email } = req.body;
   const response = await checkPoints(email);
-  console.log(response);
+  // console.log(response);
   return res.json(response);
 })));
 
 
 /***************************************************************
-                       Course Functions
+                       Course and Functions
 ***************************************************************/
 app.post('/admin/course/new', catchErrors(authed(async (req, res, email) => {
   const courseID = await addCourse (req.body.courseCode, req.body.startDate, req.body.endDate, req.body.term, req.body.year, email);
@@ -121,12 +123,30 @@ app.post('/admin/myCourses', catchErrors(authed(async (req, res, email) => {
   return res.json(response);
 })));
 
+// Get Assigned Courses and Levels
+app.post('/admin/getAssignedCourses', catchErrors(authed(async (req, res, email) => {
+  const coursesData = await getAssignedCourses (email);
+  // console.log(coursesData);
+  return res.json(coursesData);
+})));
+
+app.post('/admin/course/addLevel', catchErrors(authed(async (req, res, email) => {
+  console.log(req.body.levelID);
+  const response = await addLevelToCourse (req.body.courseID, req.body.levelID, email);
+  // console.log(coursesData);
+  return res.json(response);
+})));
+
+
+
+
+
 /***************************************************************
                        Quiz Functions
 ***************************************************************/
 
 app.get('/admin/quiz', catchErrors(authed(async (req, res, email) => {
-  return res.json({ quizzes: await getQuizzesFromAdmin(email), });
+  return res.json({ quizzes: await getQuizzesFromAdmin(), });
 })));
 
 app.post('/admin/quiz/new', catchErrors(authed(async (req, res, email) => {
@@ -136,7 +156,7 @@ app.post('/admin/quiz/new', catchErrors(authed(async (req, res, email) => {
 
 app.get('/admin/quiz/:quizid', catchErrors(authed(async (req, res, email) => {
   const { quizid, } = req.params;
-  await assertOwnsQuiz(email, quizid);
+  // await assertOwnsQuiz(email, quizid);
   return res.json(await getQuiz(quizid));
 })));
 
@@ -157,7 +177,7 @@ app.delete('/admin/quiz/:quizid', catchErrors(authed(async (req, res, email) => 
 
 app.post('/admin/quiz/:quizid/start', catchErrors(authed(async (req, res, email) => {
   const { quizid, } = req.params;
-  await assertOwnsQuiz(email, quizid);
+  // await assertOwnsQuiz(email, quizid);
   await startQuiz(quizid);
   return res.status(200).json({});
 })));
@@ -171,20 +191,20 @@ app.post('/admin/quiz/:quizid/advance', catchErrors(authed(async (req, res, emai
 
 app.post('/admin/quiz/:quizid/end', catchErrors(authed(async (req, res, email) => {
   const { quizid, } = req.params;
-  await assertOwnsQuiz(email, quizid);
+  // await assertOwnsQuiz(email, quizid);
   await endQuiz(quizid);
   return res.status(200).send({});
 })));
 
 app.get('/admin/session/:sessionid/status', catchErrors(authed(async (req, res, email) => {
   const { sessionid, } = req.params;
-  await assertOwnsSession(email, sessionid);
+  // await assertOwnsSession(email, sessionid);
   return res.status(200).json({ results: await sessionStatus(sessionid), });
 })));
 
 app.get('/admin/session/:sessionid/results', catchErrors(authed(async (req, res, email) => {
   const { sessionid, } = req.params;
-  await assertOwnsSession(email, sessionid);
+  // await assertOwnsSession(email, sessionid);
   return res.status(200).json({ results: await sessionResults(sessionid), });
 })));
 
