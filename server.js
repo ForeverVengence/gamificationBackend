@@ -36,6 +36,8 @@ import {
   getCoursesOwned,
   getAssignedCourses,
   addLevelToCourse,
+  removeLevelFromCourse,
+  getShopItems,
 } from './service.js';
 
 import volleyball from 'volleyball';
@@ -130,6 +132,10 @@ app.post('/admin/getAssignedCourses', catchErrors(authed(async (req, res, email)
   return res.json(coursesData);
 })));
 
+/***************************************************************
+                            Levels
+***************************************************************/
+
 app.post('/admin/course/addLevel', catchErrors(authed(async (req, res, email) => {
   console.log(req.body.levelID);
   const response = await addLevelToCourse (req.body.courseID, req.body.levelID, email);
@@ -137,8 +143,23 @@ app.post('/admin/course/addLevel', catchErrors(authed(async (req, res, email) =>
   return res.json(response);
 })));
 
+app.post('/admin/course/removeLevel', catchErrors(authed(async (req, res, email) => {
+  console.log(req.body.levelID);
+  const response = await removeLevelFromCourse (req.body.courseID, req.body.levelID, email);
+  // console.log(coursesData);
+  return res.json(response);
+})));
 
-
+/***************************************************************
+                            Shop
+***************************************************************/
+// Get Shop Items
+app.post('/admin/shop/items', catchErrors(authed(async (req, res, email) => {
+  const result = await getShopItems (email);
+  console.log("Getting Shop Items")
+  console.log(result);
+  return res.json({ data: result });
+})));
 
 
 /***************************************************************

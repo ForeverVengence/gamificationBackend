@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs, { exists } from 'fs';
 import jwt from 'jsonwebtoken';
 import AsyncLock from 'async-lock';
 import { InputError, AccessError, } from './error.js';
@@ -23,6 +23,23 @@ let quizzes = {};
 let sessions = {};
 let courses = {};
 let topicGroups = {};
+let shopItems = {
+  "smallBooster": {
+    "name": "Small Booster (x2)",
+    "type": "Booster",
+    "desc": "Earn 2x Points on level completion",
+    "duration": 30,
+    "cost": 20000
+  },
+  "mediumBooster": {
+    "name": "Medium Booster (x4)",
+    "type": "Booster",
+    "desc": "Earn 4x Points on level completion",
+    "duration": 30,
+    "cost": 35000
+  }
+};
+
 
 
 const sessionTimeouts = {};
@@ -36,6 +53,7 @@ const update = (admins, courses, quizzes, sessions) =>
           courses,
           quizzes,
           sessions,
+          shopItems,
         }, null, 2));
         resolve();
       } catch {
@@ -51,6 +69,7 @@ export const reset = () => {
   courses = {};
   quizzes = {};
   sessions = {};
+  shopItems = shopItems;
 };
 
 try {
@@ -59,6 +78,7 @@ try {
   courses = data.courses;
   quizzes = data.quizzes;
   sessions = data.sessions;
+  shopItems = data.shopItems;
 } catch {
   
   save();
@@ -185,7 +205,7 @@ const newCoursePayload = (courseCode, startDate, endDate, term, year, owner) => 
   courseCode,
   owner,
   levels: [],
-  students: [],
+  assignedTo: [],
   startDate,
   endDate,
   term,
@@ -218,7 +238,7 @@ export const getCoursesOwned = (email) => courseLock((resolve, reject) => {
       levels: courses[key].levels,
       startDate: courses[key].startDate,
       endDate: courses[key].endDate,
-      owner: courses[key].owner,
+      owner: courses[key].ownerF,
       active: courses[key].active,
       term: courses[key].term,
       year: courses[key].year,
@@ -245,12 +265,40 @@ export const addLevelToCourse = (courseID, levelID, email) => userLock((resolve,
   console.log(levelID);
   if (email === undefined) {
     reject(new InputError('Must provide an owner email to query'));
-  } else {
+  } 
+  else if (levelID === undefined) {
+    reject(new InputError('Must provide an level to add'));
+  } 
+  else {
     if (courseID in courses) {
       if (!courses[courseID].levels.includes(levelID)){
         courses[courseID].levels.push(levelID);
       }
-      // Add Each Course User to access this level
+      // Check Each User and update their assigned course
+      // for (var tempUser in admins) {
+      //   // Insert course object
+      //   if (courseID in tempUser.assignedCourses) {
+      //     tempUser.assignedCourses[courseID] = courses[courseID];
+      //   }
+      //   // for (var assignedCourse in tempUser.assignedCourses) {
+      //   //   // let courseExists = Object.values(assignedCourse).includes(courseID);
+      //   // }
+      // }
+
+
+      // Go to Quiz.assignedTo and add course.assignedTo
+      
+      if (!(levelID in quizzes)) {
+        reject(new InputError('Invalid quiz ID'));
+      } else {
+        console.log(courses[courseID].assignedTo)
+        courses[courseID].assignedTo.forEach(user => {
+
+          if (!quizzes[levelID].assignedTo.includes(user)) {
+            quizzes[levelID].assignedTo.push(user);
+          }
+        });
+      }
 
       resolve(courses[courseID].levels);
     } else {
@@ -258,6 +306,59 @@ export const addLevelToCourse = (courseID, levelID, email) => userLock((resolve,
     }
   }
 });
+
+export const removeLevelFromCourse = (courseID, levelID, email) => userLock((resolve, reject) => {
+  if (email === undefined) {
+    reject(new InputError('Must provide an owner email to query'));
+  } else {
+    if (courseID in courses) {
+      if (courses[courseID].levels.includes(levelID)){
+        courses[courseID].levels = courses[courseID].levels.filter(item => item !== levelID);
+      }
+      // Go to Quiz.assignedTo and add course.assignedTo
+      if (!(levelID in quizzes)) {
+        reject(new InputError('Invalid quiz ID'));
+      } else {
+        console.log(courses[courseID].assignedTo)
+        courses[courseID].assignedTo.forEach(user => {
+          if (quizzes[levelID].assignedTo.includes(user)) {
+            quizzes[levelID].assignedTo = quizzes[levelID].assignedTo.filter(item => item !== user);
+          }
+        });
+      }
+
+      resolve(courses[courseID].levels);
+    } else {
+      resolve({});
+    }
+  }
+});
+
+
+
+
+
+
+
+
+/***************************************************************
+                       Shop Functions
+***************************************************************/
+// Get Items from Shop
+export const getShopItems = (email) => userLock((resolve, reject) => {
+  
+  if (email === undefined) {
+    reject(new InputError('Must provide an owner email to query'));
+  } else {
+    if (email in admins) {
+      resolve(shopItems);
+    } else {
+      resolve({});
+    }
+  }
+});
+
+
 
 
 /***************************************************************
