@@ -23,22 +23,37 @@ let quizzes = {};
 let sessions = {};
 let courses = {};
 let topicGroups = {};
-let shopItems = {
-  "smallBooster": {
+let shopItems = [
+  {
     "name": "Small Booster (x2)",
+    "code": "smallBooster",
     "type": "Booster",
     "desc": "Earn 2x Points on level completion",
-    "duration": 30,
+    "sellingFast": true,
+    "quantity": 2598,
+    "duration": 10,
     "cost": 20000
   },
-  "mediumBooster": {
+  {
     "name": "Medium Booster (x4)",
+    "code": "mediumBooster",
     "type": "Booster",
     "desc": "Earn 4x Points on level completion",
-    "duration": 30,
+    "sellingFast": true,
+    "quantity": 863,
+    "duration": 15,
     "cost": 35000
+  },
+  {
+    "name": "Complete a Challenge",
+    "type": "Completion",
+    "desc": "Use this to complete level!",
+    "sellingFast": true,
+    "quantity": 20,
+    "duration": "Single Use",
+    "cost": 80000
   }
-};
+];
 
 
 
