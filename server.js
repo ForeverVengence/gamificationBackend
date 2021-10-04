@@ -38,6 +38,7 @@ import {
   addLevelToCourse,
   removeLevelFromCourse,
   getShopItems,
+  getAssignedCoursesWithInfo,
 } from './service.js';
 
 import volleyball from 'volleyball';
@@ -128,6 +129,13 @@ app.post('/admin/myCourses', catchErrors(authed(async (req, res, email) => {
 // Get Assigned Courses and Levels
 app.post('/admin/getAssignedCourses', catchErrors(authed(async (req, res, email) => {
   const coursesData = await getAssignedCourses (email);
+  // console.log(coursesData);
+  return res.json(coursesData);
+})));
+
+// Get Assigned Courses with info
+app.post('/admin/getAssignedCoursesWithInfo', catchErrors(authed(async (req, res, email) => {
+  const coursesData = await getAssignedCoursesWithInfo (email);
   // console.log(coursesData);
   return res.json(coursesData);
 })));
@@ -277,7 +285,7 @@ app.get('/', (req, res) => res.redirect('/docs'));
 // app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // const configData = JSON.parse(fs.readFileSync('./frontend/src/config.json'));
-const port = 5005;
+const port = 16000;
 
 const server = app.listen(port, () => {
   console.log('Listening on port ' + port);

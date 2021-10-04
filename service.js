@@ -276,6 +276,28 @@ export const getAssignedCourses = (email) => userLock((resolve, reject) => {
   }
 });
 
+export const getAssignedCoursesWithInfo = (email) => userLock((resolve, reject) => {
+  
+  if (email === undefined) {
+    reject(new InputError('Must provide an owner email to query'));
+  } else {
+    if (email in admins) {
+      var objOfCourses = admins[email].assignedCourses;
+      console.log(typeof(objOfCourses));
+      var arr = [];
+      for (const [key, value] of Object.entries(objOfCourses)) {
+        console.log(key);
+        console.log(courses[key]);
+        arr.push(courses[key]);
+        // course.info = courses[course];
+      }
+      resolve(arr);
+    } else {
+      resolve({});
+    }
+  }
+});
+
 export const addLevelToCourse = (courseID, levelID, email) => userLock((resolve, reject) => {
   console.log(levelID);
   if (email === undefined) {
