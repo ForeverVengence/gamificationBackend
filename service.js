@@ -288,6 +288,7 @@ export const getAssignedCoursesWithInfo = (email) => userLock((resolve, reject) 
       for (const [key, value] of Object.entries(objOfCourses)) {
         console.log(key);
         console.log(courses[key]);
+        courses[key].courseid = key;
         arr.push(courses[key]);
         // course.info = courses[course];
       }
