@@ -285,7 +285,7 @@ app.get('/', (req, res) => res.redirect('/docs'));
 // app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // const configData = JSON.parse(fs.readFileSync('./frontend/src/config.json'));
-const port = 16000;
+const port = 5005;
 
 const server = app.listen(port, () => {
   console.log('Listening on port ' + port);
